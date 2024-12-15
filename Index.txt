@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Begin</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('file:///C:/Users/nikil/OneDrive/Desktop/Index/imagess1.jpg'); /* Updated background image path */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        #beginButton {
+            position: absolute;
+            bottom: 100px; /* Moved button up by adjusting the bottom value */
+            padding: 10px 20px;
+            background-color: white; /* Changed button color to white */
+            color: black; /* Changed text color to black for contrast */
+            border: 2px solid #4CAF50; /* Added border for visibility */
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        #beginButton:hover {
+            background-color: #f1f1f1; /* Slightly darker on hover */
+        }
+    </style>
+</head>
+<body>
+    <button id="beginButton" onclick="start()">Let's Begin</button>
+
+    <script>
+        function start() {
+            window.location.href = "file:///C:/Users/nikil/OneDrive/Desktop/Index/index1.html";
+        }
+
+        // Random color generator for button
+        const button = document.getElementById('beginButton');
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        button.style.backgroundColor = getRandomColor();
+    </script>
+</body>
+</html>
